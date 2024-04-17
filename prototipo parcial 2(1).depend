@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1713041344 source:c:\users\victor\desktop\semestre 3\progra1\juegos\prototipo parcial 2\src\usuario.cpp
+1713041344 source:c:\users\gabriela\desktop\progra1\juegos\prototipo parcial 2\src\usuario.cpp
 	"usuario.h"
 	<iostream>
 	<fstream>
@@ -8,12 +8,12 @@
 	<conio.h>
 	<iomanip>
 
-1713041344 c:\users\victor\desktop\semestre 3\progra1\juegos\prototipo parcial 2\include\usuario.h
+1713041344 c:\users\gabriela\desktop\semestre 3\progra1\juegos\prototipo parcial 2\include\usuario.h
 	<iostream>
 	<fstream>
 	<string>
 
-1713041344 source:c:\users\victor\desktop\semestre 3\progra1\juegos\prototipo parcial 2\src\menug.cpp
+1713041344 source:c:\users\gabriela\desktop\progra1\juegos\prototipo parcial 2\src\menug.cpp
 	"menuG.h"
 	<iostream>
 	<fstream>
@@ -22,15 +22,45 @@
 	<conio.h>
 	<iomanip>
 
-1713041355 c:\users\victor\desktop\semestre 3\progra1\juegos\prototipo parcial 2\include\menug.h
+1713041355 c:\users\gabriela\desktop\progra1\juegos\prototipo parcial 2\include\menug.h
 	<fstream>
 	<stdlib.h>
 	<cstdlib>
 	<conio.h>
 	<iomanip>
 
-1713041475 source:c:\users\victor\desktop\semestre 3\progra1\juegos\prototipo parcial 2\main.cpp
+1713041475 source:c:\users\victor\desktop\progra1\juegos\prototipo parcial 2\main.cpp
 	<iostream>
 	<usuario.h>
 	<menuG.h>
+
+1713043001 source:c:\users\36317\downloads\prototipo2pp12024\src\menug.cpp
+	"menuG.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713041355 c:\users\36317\downloads\prototipo2pp12024\include\menug.h
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713041344 source:c:\users\36317\downloads\prototipo2pp12024\src\usuario.cpp
+	"usuario.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713041344 c:\users\36317\downloads\prototipo2pp12024\include\usuario.h
+	<iostream>
+	<fstream>
+	<string>
 

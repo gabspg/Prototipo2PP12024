@@ -29,15 +29,16 @@ int main()
 
     cout <<"\t\t\t--------------------------------------------"<<endl;
     cout <<"\t\t\t |       BIENVENIDO AL MENU PRINCIPAL      |"<<endl;
-    cout <<"\t\t\t |Nombre: Victor Omar Gomez Carrascosa|"<<endl;
-    cout <<"\t\t\t |Carne: 9959-23-10733                      |"<<endl;
+    cout <<"\t\t\t |Nombre:Gabriela Pinto Garcia             |"<<endl;
+    cout <<"\t\t\t |Carne: 9959 23 1087                      |"<<endl;
     cout <<"\t\t\t--------------------------------------------"<<endl;
-	cout<<"\t\t\t 1. Ingreso Al Menu de Usurios"<<endl;
-	cout<<"\t\t\t 2. Ingreso Al Menu de Catalogos"<<endl;
-	cout<<"\t\t\t 3. Exit"<<endl;
+    cout << " ";
+	cout<<"\t\t\t 1. Menu de Usurios"<<endl;
+	cout<<"\t\t\t 2. Menu de Catalogos"<<endl;
+	cout<<"\t\t\t 3. Salida"<<endl;
 
 	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3]"<<endl;
+	cout<<"\t\t\tEscoger opcion:"<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"Ingresa tu Opcion: ";
     cin>>opcion;
@@ -51,7 +52,7 @@ int main()
     case 3:
         exit(0);
 	default:
-		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
+		cout<<"\n\t\t\t OPCION INVALIDA";
         break;}
         }while(opcion!= 3);
 
