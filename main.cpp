@@ -1,11 +1,11 @@
 #include <iostream>
 #include <usuario.h>
-#include<menuG.h>
+#include<menu.h>
 using namespace std;
 
 int main()
 {
-    //variables de user y contraseñan
+    //variables de user y contraseÃ±an
     string user,contrasena;
     //llmamos al objeto e ingresamos los parametros
     usuario ingreso(user,contrasena);
@@ -18,7 +18,7 @@ int main()
     bool UsuarioCorrecto=ingreso.VerificarUsuario();
 
 
-    //luego de ingresar con usuario y contraseña se nos desplega otro menu
+    //luego de ingresar con usuario y contraseÃ±a se nos desplega otro menu
     if(UsuarioCorrecto)
     {
         int opcion;
@@ -27,19 +27,19 @@ int main()
         {
         	system("cls");
 
-    cout <<"\t\t\t--------------------------------------------"<<endl;
+    cout <<"\t\t\t****************************************"<<endl;
     cout <<"\t\t\t |       BIENVENIDO AL MENU PRINCIPAL      |"<<endl;
     cout <<"\t\t\t |Nombre:Gabriela Pinto Garcia             |"<<endl;
     cout <<"\t\t\t |Carne: 9959 23 1087                      |"<<endl;
-    cout <<"\t\t\t--------------------------------------------"<<endl;
+    cout <<"\t\t\t****************************************"<<endl;
     cout << " ";
 	cout<<"\t\t\t 1. Menu de Usurios"<<endl;
 	cout<<"\t\t\t 2. Menu de Catalogos"<<endl;
 	cout<<"\t\t\t 3. Salida"<<endl;
 
-	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tEscoger opcion:"<<endl;
-	cout<<"\t\t\t-------------------------------"<<endl;
+	cout<<"\t\t\t****************************************"<<endl;
+	cout<<"\t\t\t          Escoger opcion:"<<endl;
+	cout<<"\t\t\t****************************************"<<endl;
 	cout<<"Ingresa tu Opcion: ";
     cin>>opcion;
     switch(opcion){
