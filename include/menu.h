@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class menuG
+class menu
 {
     public:
         menuG(string id, string nombre, string precio, string cantidad);
