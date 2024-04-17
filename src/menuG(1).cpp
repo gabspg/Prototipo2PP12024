@@ -1,4 +1,4 @@
-#include "menuG.h"
+#include "menu.h"
 
 #include<iostream>
 #include<fstream>
@@ -64,17 +64,18 @@ void menuG::menuPrincipal()
     {
 	system("cls");
 
-    cout <<"\t\t\t----------------------------------"<<endl;
-    cout <<"\t\t\t|       MENU DE CATALOGOS         |"<<endl;
-    cout <<"\t\t\t----------------------------------"<<endl;
-	cout<<"\t\t\t 1. CRUD CATALOGOS"<<endl;
-	cout<<"\t\t\t 2. INFORMES"<<endl;
-	cout<<"\t\t\t 3. Exit"<<endl;
+    cout <<"\t\t\t********************************"<<endl;
+    cout <<"\t\t\t|              CATALOGOS         |"<<endl;
+    cout <<"\t\t\t********************************"<<endl;
+	cout<<"\t\t\t 1. CRDU catalogo"<<endl;
+	cout<<"\t\t\t 2. Informe"<<endl;
+	cout<<"\t\t\t 3. Salida"<<endl;
 
-	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3]"<<endl;
-	cout<<"\t\t\t-------------------------------"<<endl;
+	cout<<"\t\t\t******************************"<<endl;
+	cout<<"\t\t\tEscoger una opcion: "<<endl;
+	cout<<"\t\t\t******************************"<<endl;
 	cout<<"Ingresa tu Opcion: ";
+	    
     cin>>opcion;
 
     switch(opcion)
@@ -91,7 +92,7 @@ void menuG::menuPrincipal()
 	case 3:
 	    salir = true;
     default:
-        cout<<"\t\t\t\nSaliendo del menu";
+        cout<<"\t\t\t\nSALIENDO... ";
 	}
     }while(opcion!= 3);
 }
@@ -105,54 +106,51 @@ int opcion;
    do
    {
 
-     cout <<"\t\t\t--------------------------------------------"<<endl;
-    cout <<"\t\t\t |       BIENVENIDO AL MENU De USUARIOS     |"<<endl;
-    cout <<"\t\t\t--------------------------------------------"<<endl;
-	cout<<"\t\t\t 1. Ingreso Nuevos (cosas)"<<endl;
-	cout<<"\t\t\t 2. Modificar (cosas)"<<endl;
-	cout<<"\t\t\t 3. Borrar (cosas)"<<endl;
-	cout<<"\t\t\t 4. SALIR"<<endl;
+     cout <<"\t\t\t****************************************"<<endl;
+    cout <<"\t\t\t |                MENU USUARIOS              |"<<endl;
+    cout <<"\t\t\t****************************************"<<endl;
+	cout<<"\t\t\t 1. Nuevos ingresos"<<endl;
+	cout<<"\t\t\t 2. Modificar producto"<<endl;
+	cout<<"\t\t\t 3. Borrar producto"<<endl;
+	cout<<"\t\t\t 4. Salir"<<endl;
 
 	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5]"<<endl;
+	cout<<"\t\t\tEscoger opcion: "<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"Ingresa tu Opcion: ";
 
     cin>>opcion;
 
     switch(opcion)
-
-   //--------------------------------------------------------------------------------------------------
     {
 
     case 1:
         do
             {  insertar(); //metodo para ingresar usuarios
-                cout<<"\n\t\t\t Agregar otra persona (S/N)"<<endl;
+                cout<<"\n\t\t\t Desea agregar a otra persona (S/N)"<<endl;
                 cin>>x;//Recibe algo del usuario
             } while(x=='s'|| x=='S');// si el char que recive el usuario es S o s repetir el ciclo
             system("cls");
         break;
- //--------------------------------------------------------------------------------------------------
+
 
     case 2:
         modificar();
         system("pause");
         system ("cls");
         break;
- //--------------------------------------------------------------------------------------------------
+
     case 3:
          borrar();
          system("pause");
         system ("cls");
         break;
- //--------------------------------------------------------------------------------------------------
+
     case 4:
         break;
- //-------------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------------
+
 	default:
-		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
+		cout<<"\n\t\t\t Opcion no valida ";
     break;}
         }while(opcion!= 4);
 
@@ -163,13 +161,13 @@ void menuG::desplegar()
 int total=0;
 
 //imprimir encabezado
-cout<<"\n-------------------------Tabla de Registrados-------------------------"<<endl;
+cout<<"\n************************  Tabla de Registrados  ************************"<<endl;
 fstream fileDesplegar;
 fileDesplegar.open("catalogos.txt",ios::in);
 //condicion si el archivo no se puede abrir
 if(!fileDesplegar)
     {
-    cout<<"\n\t\t\tNo hay informaciÛn..."; // muestra un mensaje de error
+    cout<<"\n\t\t\tNo hay informaci√≥n..."; // muestra un mensaje de error
 		fileDesplegar.close(); // cierra el archivo
     }
 else
@@ -198,15 +196,15 @@ void menuG::insertar()
 {
     system("cls");
     string id,nombre,precio,cantidad;
-    cout<<"\n------------------------------------------------------------------------------------------------------------------------"<<endl;
-    cout<<"\n-------------------------------------------------Agregar producto--------------------------------------------"<<endl;
-    cout << "\t\t\t\nIngrese el ID de (cosa):         ";
+	
+    cout<<"\n                              -Agregar producto-"<<endl;
+    cout << "\t\t\t\nID DEL PRODUCTO:         ";
     cin >> id;
-      cout << "\t\t\t\nIngrese el nombre de (cosa):         ";
+      cout << "\t\t\t\nNOMBRE DEL PRODUCTO:         ";
     cin >> nombre;
-      cout << "\t\t\t\nIngrese el precio de (cosa):         ";
+      cout << "\t\t\t\nPRECIO DEL PRODUCTO):         ";
     cin >> precio;
-      cout << "\t\t\t\nIngrese la cantidad (cosa):         ";
+      cout << "\t\t\t\nCANTIDAD DEL PRODUCTO:         ";
     cin >> cantidad;
 
     // Abre el archivo "" en modo de apendizaje y escritura
@@ -243,16 +241,16 @@ void menuG::modificar()
     }
     else  // Si el archivo se pudo abrir
     {
-        cout<<"\n Ingrese el nombre del producto que quiere modificar: ";  // Muestra un mensaje en pantalla para ingresar el usuario a modificar
+        cout<<"\n Ingrese el nombre del producto a modificar: ";  // Muestra un mensaje en pantalla para ingresar el usuario a modificar
         cin>>productoModificar;  // Lee el nombre del usuario a modificar
         fileModif.open("record2.txt",ios::app | ios::out);  // Abre otro archivo de texto en modo escritura y agrega el contenido al final del archivo
-        fileOri >> id>> nombre>>precio>>cantidad;  // Lee el primer usuario y contraseÒa del archivo
+        fileOri >> id>> nombre>>precio>>cantidad;  // Lee el primer usuario y contrase√±a del archivo
 
         while(!fileOri.eof())  // Mientras no se llegue al final del archivo
         {
             if(productoModificar!=nombre)  // Si el usuario no es el que se quiere modificar
                 {
-                fileModif<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre<<std::left<<std::setw(15)<< precio<<std::left<<std::setw(15)<< cantidad<<"\n";  // Escribe en el archivo temporal el usuario y contraseÒa sin modificar
+                fileModif<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre<<std::left<<std::setw(15)<< precio<<std::left<<std::setw(15)<< cantidad<<"\n";  // Escribe en el archivo temporal el usuario y contrase√±a sin modificar
 
 
                 }
@@ -267,12 +265,12 @@ void menuG::modificar()
                 cin >> precio;
                 cout << "\t\t\t\nIngrese la nueva cantidad:         ";
                 cin >> cantidad;
-                fileModif<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre<<std::left<<std::setw(15)<< precio<<std::left<<std::setw(15)<< cantidad<<"\n";  // Escribe en el archivo temporal el usuario y contraseÒa sin modificar
+                fileModif<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre<<std::left<<std::setw(15)<< precio<<std::left<<std::setw(15)<< cantidad<<"\n";  // Escribe en el archivo temporal el usuario y contrase√±a sin modificar
                 contador++;  // Incrementa el contador de usuarios modificados
                 cout << "\t\t\t\nUsuario Modificado exitosamente.";
                 }
 
-                    fileOri >> id>> nombre>>precio>>cantidad; // Lee el siguiente usuario y contraseÒa del archivo
+                    fileOri >> id>> nombre>>precio>>cantidad; // Lee el siguiente usuario y contrase√±a del archivo
         }
 
         fileModif.close();  // Cierra el archivo temporal
@@ -295,11 +293,11 @@ void menuG::borrar()
 	// Declarar una variable para almacenar el nombre del usuario a borrar
 	string partcipante;
 
-	// Declarar una variable para indicar si se encontrÛ al usuario a borrar
+	// Declarar una variable para indicar si se encontr√≥ al usuario a borrar
 	int encontrados= 0;
 
 	// Mostrar un mensaje para indicar que se va a borrar un usuario
-	cout << "\n-------------------------producto a Borrar-------------------------" << endl;
+	cout << "\n                            -Borrar Producto-" << endl;
 
 	// Abrir el archivo "Usuarios1.txt" en modo lectura
 	file.open("catalogos.txt", ios::in);
@@ -315,39 +313,39 @@ void menuG::borrar()
 	else
 	{
 		// Pedir al usuario que ingrese el nombre del usuario a borrar
-		cout << "\n Ingrese el nombre del producto que quiere Borrar: ";
+		cout << "\n Nombre del producto a Borrar: ";
 		cin >> partcipante;
 
 		// Abrir el archivo "Record.txt
 		file1.open("record2.txt", ios::app | ios::out);
 
-		// Leer el nombre de usuario y contraseÒa del archivo "Usuario y contraseÒas.txt"
+		// Leer el nombre de usuario y contrase√±a del archivo "Usuario y contrase√±as.txt"
 		file >> id>> nombre>>precio>>cantidad;
 
 		// Mientras no se llegue al final del archivo "Usuarios1.txt"
 		while (!file.eof())
 		{
-			// Verificar si el nombre de usuario leÌdo es diferente al nombre del usuario a borrar
+			// Verificar si el nombre de usuario le√≠do es diferente al nombre del usuario a borrar
 			if (partcipante != nombre)
 			{
-				// Escribir el nombre de usuario y contraseÒa en el archivo "Record.txt"
-                file1<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre<<std::left<<std::setw(15)<< precio<<std::left<<std::setw(15)<< cantidad<<"\n";  // Escribe en el archivo temporal el usuario y contraseÒa sin modificar
+				// Escribir el nombre de usuario y contrase√±a en el archivo "Record.txt"
+                file1<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre<<std::left<<std::setw(15)<< precio<<std::left<<std::setw(15)<< cantidad<<"\n";  // Escribe en el archivo temporal el usuario y contrase√±a sin modificar
 			}
 			else
 			{
 				// Incrementar el contador de usuarios encontrados
 				encontrados++;
 
-				// Mostrar un mensaje indicando que se borrÛ al usuario exitosamente
-				cout << "\n\t\t\tBorrado de informacion exitoso";
+				// Mostrar un mensaje indicando que se borr√≥ al usuario exitosamente
+				cout << "\n\t\t\tSE HA BORRADO CORRECTAMENTE";
 			}
 
-			// Leer el siguiente nombre de usuario y contraseÒa del archivo "Usuarios1.txt"
+			// Leer el siguiente nombre de usuario y contrase√±a del archivo "Usuarios1.txt"
                 file >> id>> nombre>>precio>>cantidad;
 
 		}
 
-		// Verificar si no se encontrÛ al usuario a borrar
+		// Verificar si no se encontr√≥ al usuario a borrar
 		if (encontrados == 0)
 		{
 			cout << "\n\t\t\t Nombre del Usuario no encontrado...";
@@ -364,5 +362,7 @@ void menuG::borrar()
 		rename("record2.txt", "catalogos.txt");
 	}
 }
+
+
 
 
